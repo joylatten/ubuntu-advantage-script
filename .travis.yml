@@ -1,9 +1,11 @@
 language: python
 python:
+  - "3.4"
   - "3.5"
+  - "3.6"
 dist: precise
 install: pip install tox
-script: make lint test
+script: make test lint
 addons:
   apt:
     sources:

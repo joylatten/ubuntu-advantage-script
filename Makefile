@@ -2,10 +2,11 @@ build:
 	@echo Nothing to build.
 
 test:
-	@tox
+	@tox -e python
 
 lint:
-	@shellcheck -s dash advantage update-motd.d/*
+	@tox -e lint
+	@shellcheck -s dash ubuntu-advantage update-motd.d/*
 
 
 .PHONY: build test lint
